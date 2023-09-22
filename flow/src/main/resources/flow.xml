@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:os="http://www.mulesoft.org/schema/mule/os" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="cb3fd5c1-0569-49a4-b88a-1ec13488f631" basePath="flow" >
+		<http:listener-connection host="${http.host}" port="${http.port}" />
+	</http:listener-config>
+	<os:object-store name="Object_store" doc:name="Object store" doc:id="4eb9a6bf-fa0e-4f60-9e0a-42823a9df9d0" />
+	<configuration-properties doc:name="Configuration properties" doc:id="af894a0b-3c02-48a1-8fe0-3553b5973363" file="dev.yaml"/>
+	<flow name="flowFlow" doc:id="c72f5212-3251-400b-a9fd-55fabe71dd14" >
+		<http:listener doc:name="Listener" doc:id="3ddd6e78-c970-43ff-996d-10384e01f8e2" config-ref="HTTP_Listener_config" path="${http.path}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="a40a9587-05ca-4d9f-8b43-6428d5f0445d" message="this is property file task"/>
+	</flow>
+</mule>
