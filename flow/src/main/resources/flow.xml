@@ -13,6 +13,7 @@ http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/cu
 	<configuration-properties doc:name="Configuration properties" doc:id="af894a0b-3c02-48a1-8fe0-3553b5973363" file="dev.yaml"/>
 	<flow name="flowFlow" doc:id="c72f5212-3251-400b-a9fd-55fabe71dd14" >
 		<http:listener doc:name="Listener" doc:id="3ddd6e78-c970-43ff-996d-10384e01f8e2" config-ref="HTTP_Listener_config" path="${http.path}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="b182ee42-36a1-4960-b583-21a6d90f7707" message="flow started"/>
 		<logger level="INFO" doc:name="Logger" doc:id="a40a9587-05ca-4d9f-8b43-6428d5f0445d" message="this is property file task"/>
 		<logger level="INFO" doc:name="Logger" doc:id="1fb232a5-8d93-461a-b608-c07f756b610e" message="logger ended"/>
 	</flow>
