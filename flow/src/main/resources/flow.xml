@@ -15,5 +15,6 @@ http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/cu
 		<http:listener doc:name="Listener" doc:id="3ddd6e78-c970-43ff-996d-10384e01f8e2" config-ref="HTTP_Listener_config" path="${http.path}"/>
 		<logger level="INFO" doc:name="Logger" doc:id="a40a9587-05ca-4d9f-8b43-6428d5f0445d" message="this is property file task"/>
 		<logger level="INFO" doc:name="Logger" doc:id="1fb232a5-8d93-461a-b608-c07f756b610e" message="logger ended"/>
+		<logger level="INFO" doc:name="Logger" doc:id="1fb232a5-8d93-461a-b608-c07f756b610e" message="flow stopped"/>
 	</flow>
 </mule>
